@@ -6,7 +6,7 @@ function createGrid(width, height){
 
         for(var j = 0; j < width; j++){
             var space = document.createElement('div');
-            space.classList.add('gridSpace');
+            space.classList.add('grid-space');
 
             gridContainer.appendChild(space);
         }
@@ -14,4 +14,4 @@ function createGrid(width, height){
     }
 }
 
-createGrid(20, 20);
+var grid = document.getElementsByClassName('grid-container')[0];
