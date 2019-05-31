@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NateTheGrate/DndCompanionWebsite/issues"
   },
-  "homepage": "https://github.com/NateTheGrat/DndCompanionWebsite"
+  "homepage": "https://github.com/NateTheGrat/DndCompanionWebsite",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
