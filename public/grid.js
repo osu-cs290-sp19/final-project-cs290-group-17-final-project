@@ -1,6 +1,6 @@
 function createGrid(width, height){
     
-    var gridContainer = document.getElementsByClassName('grid-container');
+    var gridContainer = document.getElementsByClassName('grid-container')[0];
     
     for(var i = 0; i < height; i++){
 
