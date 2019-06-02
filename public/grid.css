@@ -1,0 +1,13 @@
+.grid-container{
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 87.5em;
+    height: 85em;
+}
+
+div .grid-space{ 
+    flex-shrink: 0;
+    background-color:rgb(240, 216, 168);
+    border: 1px dotted black;
+}
