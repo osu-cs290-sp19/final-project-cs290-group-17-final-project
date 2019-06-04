@@ -3,7 +3,7 @@
 
     <meta charset="utf-8">
     <title>DND WebSite</title>
-
+ <script src="/char.js" charset="utf-8" defer></script>
 
 
 
@@ -12,6 +12,17 @@
   <body>
 
     <header>
+
+      <article class="inser-bar">
+        <div class="inser-content">
+ 	<input type="text" id="inser-name" placeholder="Character Name">
+ 	<input type="text" id="inser-health" placeholder="Hit Points">
+ 	<input type="text" id="inser-ac" placeholder="Armor Class">
+ 	<input type="text" id="inser-notes" placeholder="Extra Notes">
+        <button type="button" class="char-create">Create</button>
+        </div>
+      </article>
+
 	     <main class="char-container">
 
       <article class="char">
@@ -25,6 +36,10 @@
           <p class="char-ac">
 	  18
           </p>
+          <p class="char-notes">
+	  Notes about character
+          </p>
+ 	<button type="button" class="char-delete">&times;</button>
         </div>
       </article>
       		</main>
