@@ -2,12 +2,46 @@
     margin: 5%;
     display: flex;
     flex-wrap: wrap;
-    width: 87.5em;
-    height: 85em;
+    width: 80em;
 }
 
 div .grid-space{ 
+    padding:0;
+    margin:0;
     flex-shrink: 0;
     background-color:rgb(240, 216, 168);
     border: 1px dotted black;
+}
+
+.colorpicker-container{
+
+    position: fixed;
+    bottom:5%;
+    right:3%;
+    padding: 1%;
+    background-color: white;
+    border: 1.5px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.color{
+    width:50px;
+    height: 50px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    background-color: red;
+    border: 1.5px solid black;
+    border-radius: 10px;
+}
+
+.color#red{
+    background-color: red;
+}
+.color#blue{
+    background-color: blue;
+}
+
+.color#canvas{
+    background-color: rgb(240, 216, 168);
 }

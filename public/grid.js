@@ -1,23 +1,22 @@
-function createGrid(width, height){
-    
-    var gridContainer = document.getElementsByClassName('grid-container')[0];
 
-    var containerWidth = gridContainer.getBoundingClientRect().width;
-    var containerHeight = gridContainer.getBoundingClientRect().height;
-    
-    for(var i = 0; i < height; i++){
+var gridContainer = document.getElementsByClassName('grid-container')[0];
+var containerWidth = gridContainer.getBoundingClientRect().width;
 
-        for(var j = 0; j < width; j++){
+function createGrid(size){
+    
+    for(var i = 0; i < size; i++){
+
+        for(var j = 0; j < size; j++){
+
             var space = document.createElement('div');
             space.classList.add('grid-space');
 
-            var spaceWidth = Math.floor(containerWidth / (width + 1));
-            var spaceHeight = Math.floor(containerHeight / (height));
+            var spaceWidth = (containerWidth / (size)) - 2;
 
-            console.log("(" + containerWidth + ", " + containerHeight + ")" + ", (" + spaceWidth + ", " + spaceHeight + ")" );
+            console.log("(" + containerWidth + ", " + containerWidth + ")" + ", (" + spaceWidth + ", " + spaceWidth + ")" );
 
-            space.setAttribute("width", spaceWidth + "px");
-            space.setAttribute("height", spaceHeight + "px");
+            space.style.width = spaceWidth + "px";
+            space.style.height = spaceWidth + "px";
 
             gridContainer.appendChild(space);
         }
@@ -25,6 +24,27 @@ function createGrid(width, height){
     }
 }
 
-createGrid(20,20);
+createGrid(30);
 
-var grid = document.getElementsByClassName('grid-container')[0];
+function changeColor(event){
+    event.target.style.backgroundColor = color;
+}
+
+var spaces = gridContainer.childNodes;
+for(var i = 0; i < spaces.length; i++){
+    spaces[i].addEventListener('click', changeColor);
+}
+
+var colorpicker =  document.getElementsByClassName('colorpicker-container')[0];
+var colors = colorpicker.childNodes;
+
+for(var i = 0; i < colors.length; i++){
+    colors[i].addEventListener('click', setColor);
+}
+
+var color;
+
+function setColor(event){
+    color = event.target.getAttribute('background-color');
+    console.log(color);
+}
