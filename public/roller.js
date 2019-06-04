@@ -10,10 +10,13 @@ rollButton.addEventListener('click',function(event){
 	var uniqueDice = 0;
 	for(var i = 0; i < 6; i++){
 
-		var elem = document.getElementsByClassName('dice-amount')[i];
+		var elem = document.getElementsByClassName('dice-amount')[i].value;
+
 		if(elem != 0){
-			if(elem != Number.isInteger(elem)){
-				alert("You dawg, you put like a value that does wor. You put in: " + elem);
+			console.log(elem);
+			//this function checks to see if strings are put through
+			if(/^[a-zA-Z]+$/.test(elem)){
+				alert("You dawg, you put like a value that does work. You put in: " + elem);
 			}else{
 				uniqueDice++;
 				collComp.push(collection[i]); 
@@ -25,8 +28,8 @@ rollButton.addEventListener('click',function(event){
 	console.log("ROLL TEH DIYSSS");
 	
 	var milled = rollSelection(collComp);
-	for(var i = 0; i < uniqueDice; i++){
-		console.log("==This is in array " + i + ": " + milled[i]); 
+	for(var i = 0; i < uniqueDice-1; i++){
+		console.log("==This is in array " + milled[i] + ": " + milled[i+1]); 
 	}
 	var total = addUp(milled);
 	console.log("==TEH FINAL VALUE IS: " + total);
