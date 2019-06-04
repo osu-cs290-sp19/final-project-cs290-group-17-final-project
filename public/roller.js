@@ -3,27 +3,33 @@ var rollButton = document.getElementById('roll-dice-button');
 
 
 rollButton.addEventListener('click',function(event){
-	//fix this array
-	var collection = [4, 0, 6, 0, 8, 0, 10, 0, 12, 0, 20, 0];
+	
+	
+	var collection = [4, 6, 8, 10, 12, 20];
+	var collComp = [];
 	var uniqueDice = 0;
 	for(var i = 0; i < 6; i++){
 
 		var elem = document.getElementsByClassName('dice-amount')[i];
 		if(elem != 0){
-			uniqueDice++;
-			collection[1+(i*2)] = elem;
+			if(elem != Number.isInteger(elem)){
+				alert("You dawg, you put like a value that does wor. You put in: " + elem);
+			}else{
+				uniqueDice++;
+				collComp.push(collection[i]); 
+				collComp.push(elem);
+			}
 		}
-		
-		
-		
 	}
 	
 	console.log("ROLL TEH DIYSSS");
 	
-	var milled = rollSelection(collection);
+	var milled = rollSelection(collComp);
 	for(var i = 0; i < uniqueDice; i++){
 		console.log("==This is in array " + i + ": " + milled[i]); 
 	}
+	var total = addUp(milled);
+	console.log("==TEH FINAL VALUE IS: " + total);
 	
 	
 });
@@ -38,16 +44,16 @@ function rollSelection(arr){
 	for(var i = 0; i< size;i++){
 		var amount = arr.pop();
 		var side = arr.pop();
-		var sto = rollDie(side, amount);
+		var sto = rollDice(side, amount);
 		
 		finished.push(sto);
 	}
 	
-	return finished
+	return finished;
 }
 
 
-function rollDie(sides, amount){
+function rollDice(sides, amount){
 	var rolledArr = [];
 	rolledArr.push(sides);
 	
@@ -58,4 +64,18 @@ function rollDie(sides, amount){
 	}
 	
 	return rolledArr;
+}
+
+function addUp(arrayOfarr){
+	console.log("==ADDING TEH DYSSSS");
+	var total = 0;
+	for(var i = 0; i < arrayOfarr.length; i++){
+		for(var j = 1; j < arrayOfarr[i].length; j++){
+			total += arrayOfarr[i][j];
+		}
+		console.log("==TEH CURRENT VALUE: " + total);
+	}
+
+	return total;
+	
 }
