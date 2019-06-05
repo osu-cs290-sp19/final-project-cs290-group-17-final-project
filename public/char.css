@@ -57,3 +57,30 @@ header .site-title{
 .navlist li a:hover{
     color: rgb(224, 81, 81);
 }
+
+.char-container {
+  margin: 50px 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.char {
+  flex: 0 1 100%;
+  display: flex;
+  margin: 2px;
+  padding: 3px ;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  background-color: #fff;
+
+}
+.char-content {
+  flex: 1 1 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+
+.char-content .char-delete{
+  padding: 2px 0px 2px 0px;	
+}
