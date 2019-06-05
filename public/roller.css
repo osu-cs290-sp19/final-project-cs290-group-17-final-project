@@ -1,0 +1,66 @@
+body {
+  font-family: Times New Roman, Helvetica, sans-serif;
+  font-size: 20;
+  margin: 0;
+  background-color: rgb(238, 238, 238);
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    
+    flex-grow: 1;
+
+}
+
+.site-title {
+    font-size: 36;
+    background-color: rgb(88, 8, 153);
+    margin: 0;
+    padding: 5% 3% 7% 2%;
+    text-decoration: none;
+    color: white;
+    font-family: Roboto;
+    font-weight: 100;
+}
+header .site-title{
+    font-family: 'Niconne', cursive;
+}
+
+.navbar{
+    display:flex;
+    flex-grow:1;
+    
+    background-color: rgb(227, 195, 240);
+}
+
+.navlist{
+    text-align: right;
+    padding-top:0.6%;
+    flex-grow:1;
+    padding-left: 1.5%;
+}
+
+.navlist li{
+    display: inline;
+    margin-right: 1.5%;
+}
+
+.navlist li a  {
+    text-decoration: none;
+    color: black;
+}
+
+.navlist li a:hover{
+    color: rgb(224, 81, 81);
+}
+
+.twit-input-element textarea {
+  flex: 6 200px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid #de2f2f;
+}
