@@ -1,0 +1,13 @@
+[
+	
+		{
+			"weaponName":"longSword",
+			"weaponType":"sM",
+			"damageDice" : 6,
+			"nDice" : 2,
+			"weaponWeight" : "1",
+			"weaponPropertys" : "reach, finess",
+			"weaponLink" : "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiUsfjX0NbiAhUxKX0KHZOiCo8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.cgtrader.com%2F3d-models%2Fmilitary%2Fmelee%2Flong-sword&psig=AOvVaw1H72pS-t-FVQ4LFx0ekqAV&ust=1559971397686063"
+		}
+	
+]

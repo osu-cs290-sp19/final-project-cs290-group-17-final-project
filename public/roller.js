@@ -1,6 +1,6 @@
 
 var rollButton = document.getElementById('roll-dice-button');
-
+var totalText = document.getElementById('total-amount');
 
 rollButton.addEventListener('click',function(event){
 	
@@ -10,10 +10,12 @@ rollButton.addEventListener('click',function(event){
 	var uniqueDice = 0;
 	for(var i = 0; i < 6; i++){
 
-		var elem = document.getElementsByClassName('dice-amount')[i];
+		var elem = document.getElementsByClassName('dice-amount')[i].value;
+
 		if(elem != 0){
-			if(elem != Number.isInteger(elem)){
-				alert("You dawg, you put like a value that does wor. You put in: " + elem);
+			//this function checks to see if strings are put through
+			if(/^[a-zA-Z]+$/.test(elem)){
+				alert("You dawg, you put like a value that does work. You put in: " + elem);
 			}else{
 				uniqueDice++;
 				collComp.push(collection[i]); 
@@ -25,12 +27,18 @@ rollButton.addEventListener('click',function(event){
 	console.log("ROLL TEH DIYSSS");
 	
 	var milled = rollSelection(collComp);
-	for(var i = 0; i < uniqueDice; i++){
-		console.log("==This is in array " + i + ": " + milled[i]); 
-	}
+	var candy = milled;
+
+
 	var total = addUp(milled);
-	console.log("==TEH FINAL VALUE IS: " + total);
 	
+	for(var i = 0; i < uniqueDice; i++){
+		console.log("==This is in array of " + candy[i][0] + ": " + candy[i].splice(1, candy[i].length-1)); 
+	}
+	
+	
+	console.log("==TEH FINAL VALUE IS: " + total);
+	totalText.textContent = "The rolled total is: " + total;
 	
 });
 
