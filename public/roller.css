@@ -64,3 +64,56 @@ header .site-title{
   font-size: 20px;
   border: 1px solid #de2f2f;
 }
+
+
+/* MY PRECIOUS*/
+
+.unique-dice{
+	margin: auto;
+    width: 50%;
+    height: 35px;
+    border: 3px solid rgb(227, 195, 240);
+    padding: 20px;
+	
+}
+
+.dice-amount{
+	border: 1.5px solid black;
+    border-radius: 10px;
+    margin: 7px;
+    width: 40px;
+    float: right;
+    margin-top: 0;
+	text-align: center;
+}
+
+.dice-text{
+	float: left;
+    margin: 7px;
+
+	
+}
+
+#roll-dice-button{
+	margin: auto;
+    display: flex;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Times New Roman, Helvetica, sans-serif;
+	
+}
+
+#total-amount{
+	margin: auto;
+    width: 50%;
+    height: 35px;
+    border: 3px solid red;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+	
+}
