@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/NateTheGrat/DndCompanionWebsite",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongodb": "^3.2.7"
   }
 }

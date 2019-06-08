@@ -1,4 +1,9 @@
 var create = document.getElementsByClassName("char-create");
+var clear = document.getElementsByClassName("char-clear");
+var ninput = document.getElementById("inser-name");
+var hinput = document.getElementById("inser-health");
+var ainput = document.getElementById("inser-ac");
+var noinput = document.getElementById("inser-notes");
 
 function insertNewChar(charName, charHealth, charAC, charNotes) {
 
@@ -15,7 +20,7 @@ function insertNewChar(charName, charHealth, charAC, charNotes) {
   charNameElem.appendChild(charNameNode);
   charContentElem.appendChild(charNameElem);
   
-  var charHealthNode = document.createTextNode(charName);
+  var charHealthNode = document.createTextNode(charHealth);
   var charHealthElem = document.createElement('p');
   charHealthElem.classList.add('char-health');
   charHealthElem.appendChild(charHealthNode);
@@ -32,16 +37,13 @@ function insertNewChar(charName, charHealth, charAC, charNotes) {
   charNotesElem.classList.add('char-notes');
   charNotesElem.appendChild(charNotesNode);
   charContentElem.appendChild(charNotesElem);
-  
-  var charDeleteElem = document.createElement('button');
-  charDeleteElem.classList.add('char-delete');
-  charDeleteElem.innerHTML = '&times;';
-  charElem.appendChild(charDeleteElem);
-
 
   var charContainer = document.querySelector('main.char-container');
   charContainer.appendChild(charElem);
 }
+
+
+
 
 function getCreateInput(event){
 	var cname = document.getElementById('inser-name').value;
@@ -55,9 +57,27 @@ function getCreateInput(event){
 	else {
 		alert("Input Field cannot be Blank");
 	}
+	ninput.value = '';
+	hinput.value = '';
+	ainput.value = '';
+	noinput.value = '';
+
 }
 
 create[0].addEventListener('click', function(event) {
 	getCreateInput();
 });
 
+
+function clearCharacters(event){
+	var charContainer = document.querySelector('.char-container');
+  if (charContainer) {
+    while (charContainer.lastChild) {
+      charContainer.removeChild(charContainer.lastChild);
+    }
+}
+}
+
+clear[0].addEventListener('click', function(event) {
+	clearCharacters();
+});
