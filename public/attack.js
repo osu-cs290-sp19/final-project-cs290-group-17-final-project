@@ -2,6 +2,7 @@
 /*var attackData = JSON.parse("attack.json");
 */
 /*var fs = require("fs");*/
+var generateButton = 
 
 function readAttackData(attackData){
 	var s = attackData.length;
@@ -69,7 +70,14 @@ function loadPage(attackData){
 
 window.addEventListener('DOMContentLoaded', function () {
 
-  // Remember all of the existing twits in an array that we can use for search.
+	var createGenerateButton    = document.getElementById('create-link-button');
+		if (createLink) {
+		createTwitButton.addEventListener('click', showCreateTwitModal);
+	}
+	
+
+
+   	// Remember all of the existing twits in an array that we can use for search.
   
 /*	var weaponArr = loadPage(attackData);
 
