@@ -86,6 +86,7 @@ header .site-title{
     float: right;
     margin-top: 0;
 	text-align: center;
+	font-size: 32px;
 }
 
 .dice-text{
@@ -110,7 +111,7 @@ header .site-title{
 
 #roll-dice-button:hover{
 	border: 1.5px solid red;
-	
+	cursor: pointer;
 }
 
 #roll-dice-button:active{
@@ -121,10 +122,11 @@ header .site-title{
 	margin: auto;
     width: 50%;
     height: 35px;
-    border: 3px solid red;
+    border: 6px solid rgb(88, 8, 153);
     padding: 20px;
     text-align: center;
     font-size: 24px;
+	border-radius:50%
 	
 }
 
@@ -136,6 +138,7 @@ header .site-title{
 .error-container h2{
 	font-size: 60px;
 	font-weight: lighter;
+	margin: 0px;
 	
 }
 
