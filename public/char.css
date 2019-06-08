@@ -59,10 +59,39 @@ header .site-title{
 }
 
 .char-container {
-  margin: 50px 10%;
+  margin: 10px 20%;
   display: flex;
   flex-wrap: wrap;
 }
+
+.inser-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 20%;
+  background-color: #fff;
+}
+
+.inser-content {
+  margin: 0px 8px;
+}
+
+.inser-content #inser-name{
+	font-size: 18px;
+}
+
+.inser-content #inser-health{
+	font-size: 18px;
+}
+
+.inser-content #inser-ac{
+	font-size: 18px;
+}
+
+.inser-content #inser-notes{
+	font-size: 18px;
+}
+
 .char {
   flex: 0 1 100%;
   display: flex;
@@ -80,7 +109,34 @@ header .site-title{
   margin-left: 10px;
 }
 
+.char-content .char-notes{
+  align-self: flex-start;
+}
 
-.char-content .char-delete{
-  padding: 2px 0px 2px 0px;	
+.char-create {
+  position: fixed;
+  right: 4%;
+  top: 120px;
+  height: 60px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  font-size: 30px;
+  background-color: rgb(88, 8, 153);
+  color: #fff;
+  cursor: pointer;
+}
+
+.char-clear {
+  position: fixed;
+  left: 4%;
+  top: 120px;
+  height: 60px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  font-size: 30px;
+  background-color: rgb(88, 8, 153);
+  color: #fff;
+  cursor: pointer;
 }
