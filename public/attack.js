@@ -70,14 +70,17 @@ function loadPage(attackData){
 window.addEventListener('DOMContentLoaded', function () {
 
   // Remember all of the existing twits in an array that we can use for search.
-  var attackData = [];
+  
+/*	var weaponArr = loadPage(attackData);
+
+  /*var attackData = [];
   alert("attack.json");
   attackData = JSON.parse(fs.readFileSync("attack.json"));
 
   console.log(attackData);
   var objArr = [];
- objArr = loadPage(attackData); 	
-
+  objArr = loadPage(attackData); 	
+*/
   /*
   var createTwitButton = document.getElementById('create-twit-button');
   if (createTwitButton) {

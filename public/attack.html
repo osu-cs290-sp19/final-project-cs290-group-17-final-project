@@ -2,20 +2,21 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Attack Page</title>
+   <title>Attack Page</title>
 	
 	<link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" media="screen">
+	<link rel="stylesheet" href="./attack.css" media="screen">
+
 
 	<script type="text/javascript" src="attack.json"></script>
 	<script type="text/javascript" src="attack.js"></script>
 
-
   </head>
 
   <body>
-	
-	<header>
+
+    <header>
 
         <a href="index.html"><h1 class = "site-title">Dungeon Baller</h1></a>
 		<nav class = "navbar">
@@ -28,12 +29,83 @@
             </ul>
         </nav>
     </header>
-	<main class="weapon-Container">
 
-		<!--
+  </body>
+	
+	<main class="attackPageBody" >
+		
+		<article class = "Character-Creation-Container">
+			
+			<div class = "Character-Name">
+				<label for="Character-name-input"> Character Name: </label>
+				<textarea id="Character-name-input"></textarea>
+			</div>
+			
+			<div class = "Weapon-Proficiency">
+				<label for"Weapon-Proficiency-Input"> Weapon Proficiency: </label>
+				<textarea id = "Weapon-Proficiency-Input"></textarea>
+			</div>
+
+			<div class = "Ability-Score">
+				<label for"Ability-Score-Input"> Ability Score: </label>
+				<textarea id = "Weapon-Score-Input"></textarea>
+			</div>
+
+			<button class="Weapon-Container">
+				<article class="weapon">
+					<div class = "weaponPic">
+						<img src="https://media.istockphoto.com/photos/roman-military-dagger-on-white-background-picture-id585075044?k=6&m=585075044&s=612x612&w=0&h=0OVmzCoeNzV0Rw-WYse5P6-0Uo8WUVBI2te5PizXZF0=" alt="Picture of a Dagger">
+					</div>
+					<div class="weapon-content">
+						<p class="weapon-Name"> Dagger </p>
+						<p class="weapon-Dice"> Damage Roll: (1 X D4) dice  </p>	
+					</div>
+				</article>
+
+			</button>
+			
+			<button class="Weapon-Container">
+				<article class="weapon">
+					<div class = "weaponPic">
+						<img src="https://media.istockphoto.com/photos/roman-military-dagger-on-white-background-picture-id585075044?k=6&m=585075044&s=612x612&w=0&h=0OVmzCoeNzV0Rw-WYse5P6-0Uo8WUVBI2te5PizXZF0=" alt="Picture of a Dagger">
+					</div>
+					<div class="weapon-content">
+						<p class="weapon-Name"> LongDong </p>
+						<p class="weapon-Dice"> Damage Roll: (420 X D69) dice  </p>	
+					</div>
+				</article>
+			</button>
+
+			<button class = "Generate-Character">
+				<h> Generate </h>
+			</button>
+
+
+		</article>
+		<article class = "page-Links"  >
+			<h id = "Character-Links-Title"> Characters:</h>
+			<div class= "Character-Link">
+				<a href="http://placekitten.com/480/640/" id = "Char-Link"> Nate the Barbarous </a>
+			</div>
+		</article>
+	</main>	
+	<!--<article class= "weapon" class = "1xd4"
+			<div class = "weaponPic">
+				<img src="http://placekitten.com/480/640/" alt="a small kitten">
+			</div>
+			<div class="weapon-content">
+				<p class="weapon-Name">
+					Dagger
+				</p>
+				<p class="weapon-weight">	
+			</div>
+			
+	</article >-->	
+	
+	<!--
 	<button	class="Weapon-Container" class= "simple mele" class = "1xD4">i
 		<article class="Weapon">
-		<div class="weaponPic">
+		<div class="weaponPic>
           <i id="Dagger"></i>
         </div>
         <div class="weapon-content">
@@ -52,9 +124,10 @@
 		  </p>
         </div>
       </button>
-	-->
 	<!--
-	</main>
+
+
+	<!--
 	<button class="Weapon-Container" class="hidden">
 		<div class = "Weapon-Name">
 			<label for="weapon-name-input"> weapon name</label>

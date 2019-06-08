@@ -1,0 +1,90 @@
+article.Character-Creation-Container{	
+	margin:50px 10%;
+	display: flex;
+
+	flex-wrap: wrap;	
+}
+article.weapon{	
+	margin:50px 10%;
+	display: flex;
+
+	flex-wrap: wrap;	
+}
+
+div.weaponpic{
+
+	flex: 0 1 28%;
+	display: flex;
+	justify-content: center;
+	margin: 2px;
+	padding: 20px;
+	border: 1px solid #dadada;
+	border-radius: 2px;
+	background-color: #fff;
+}
+p.weapon-name{
+
+	flex: 0 1 28%;
+	display: flex;
+	justify-content: center;
+
+	margin: 2px;
+	padding: 20px;
+	border: 1px solid #dadada;
+	border-radius: 2px;
+	background-color: #fff;
+}
+
+button.generate-character{
+	flex: 0 1 28%;
+	display: flex;
+	justify-content: center;
+
+	margin: 2px;
+	padding: 20px;
+	border: 1px solid #dadada;
+	border-radius: 2px;
+	background-color: #fff;
+
+}
+
+p.weapon-dice{
+
+	flex: 0 1 28%;
+	display: flex;
+	margin: 2px;
+	padding: 20px;
+	border: 1px solid #dadada;
+	border-radius: 2px;
+	background-color: #fff;
+
+}
+button.weapon-container{
+	
+  flex: 0 1 28%;
+  display: flex;
+  margin: 2px;
+  padding: 20px;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/*
+ *.twit-container {
+  margin: 50px 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.twit {
+  flex: 0 1 28%;
+  display: flex;
+  margin: 2px;
+  padding: 20px;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+ * /
