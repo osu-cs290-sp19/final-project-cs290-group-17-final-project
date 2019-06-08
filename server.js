@@ -23,8 +23,7 @@ var mongoUser = process.env.MONGO_USER || "cs290_butlenat";
 var mongoPassword = process.env.MONGO_PASSWORD || "cs290_butlenat";
 var mongoDBName = process.env.MONGO_DB_NAME || "cs290_butlenat";
 var mongoURL = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDBName}`;
-
-var db = null;
+var mongoDBDatabase;
 
 
 
@@ -32,7 +31,7 @@ MongoClient.connect(mongoURL, function (err, client) {
   if (err) {
     //throw err;
   }
-  db = client.db(mongoDBName);
+  mongoDBDatabase = db = client.db(mongoDBName);
   app.listen(3000, function () {
     console.log("== Server listening on port 3000");
   });
