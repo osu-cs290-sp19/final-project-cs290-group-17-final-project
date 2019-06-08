@@ -17,25 +17,14 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 
-var mongoHost = process.env.MONGO_HOST || "classmongo.engr.oregonstate.edu";
+var mongoHost = process.env.MONGO_HOST// || "classmongo.engr.oregonstate.edu";
 var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.env.MONGO_USER || "cs290_butlenat";
-var mongoPassword = process.env.MONGO_PASSWORD || "cs290_butlenat";
-var mongoDBName = process.env.MONGO_DB_NAME || "cs290_butlenat";
+var mongoUser = process.env.MONGO_USER //|| "cs290_butlenat";
+var mongoPassword = process.env.MONGO_PASSWORD// || "cs290_butlenat";
+var mongoDBName = process.env.MONGO_DB_NAME //|| "cs290_butlenat";
 var mongoURL = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDBName}`;
 var mongoDBDatabase;
 console.log(mongoURL);
-
-
-MongoClient.connect(mongoURL, function (err, client) {
-  if (err) {
-    throw err;
-  }
-  mongoDBDatabase = db = client.db(mongoDBName);
-  app.listen(3000, function () {
-    console.log("== Server listening on port 3000");
-  });
-});
 
 
 app.get('/attack/', function(req, res){
@@ -55,4 +44,15 @@ app.get('/attack/', function(req, res){
 
 app.get('*', function (req, res) {
     res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+});
+
+
+MongoClient.connect(mongoURL, function (err, client) {
+    if (err) {
+        throw err;
+    }
+    db = mongoDBDatabase = client.db(mongoDBName);
+    app.listen(3000, function () {
+        console.log("== Server listening on port 3000");
+    });
 });
