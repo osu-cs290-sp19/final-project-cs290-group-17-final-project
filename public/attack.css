@@ -1,50 +1,64 @@
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
 article.Character-Creation-Container{	
 	margin:50px 10%;
 	display: flex;
-
+	background-color: bd3;
 	flex-wrap: wrap;	
 }
+
 article.weapon{	
-	margin:50px 10%;
 	display: flex;
-
-	flex-wrap: wrap;	
+	flex-flow: column wrap;
+	
+	width: 90%;
+	height: 90%;
+	max-height: 425px;
+	position: relative;
+/*	justify-content:center;*/
 }
 
-div.weaponpic{
+div.weapon-content{
+	justify-content:bottom;
+}
 
-	flex: 0 1 28%;
-	display: flex;
-	justify-content: center;
-	margin: 2px;
-	padding: 20px;
-	border: 1px solid #dadada;
-	border-radius: 2px;
-	background-color: #fff;
+button div.weaponpic{
+
+	/*justify-content: center;*/
+
 }
 p.weapon-name{
 
-	flex: 0 1 28%;
+	flex: 0 1 50%;
 	display: flex;
-	justify-content: center;
+	justify-content: top;
 
-	margin: 2px;
-	padding: 20px;
-	border: 1px solid #dadada;
-	border-radius: 2px;
-	background-color: #fff;
 }
 
 button.generate-character{
-	flex: 0 1 28%;
+/*	flex: 0 1 28%;
 	display: flex;
-	justify-content: center;
 
 	margin: 2px;
 	padding: 20px;
-	border: 1px solid #dadada;
-	border-radius: 2px;
 	background-color: #fff;
+
+	width: 85%;
+	height: 10%;
+	justify-content: bottom;*/
+  margin: 20px;
+  padding: 2px;
+  background-color: #fff;
+  width: 20%;
+
 
 }
 
@@ -53,22 +67,19 @@ p.weapon-dice{
 	flex: 0 1 28%;
 	display: flex;
 	margin: 2px;
-	padding: 20px;
-	border: 1px solid #dadada;
-	border-radius: 2px;
 	background-color: #fff;
 
 }
 button.weapon-container{
 	
-  flex: 0 1 28%;
-  display: flex;
-  margin: 2px;
-  padding: 20px;
-  border: 1px solid #dadada;
-  border-radius: 2px;
+  margin: 20px;
+  padding: 2px;
   background-color: #fff;
+  width: 20%;
+
 }
+
+
 
 /*
  *.twit-container {
