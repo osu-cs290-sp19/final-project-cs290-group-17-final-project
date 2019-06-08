@@ -136,9 +136,13 @@ header .site-title{
 }
 
 .error-container h2{
-	font-size: 60px;
-	font-weight: lighter;
+	font-size: 240px;
+	font-weight: bold;
 	margin: 0px;
+	
+}
+.error-text{
+	font-size: 60px;
 	
 }
 
