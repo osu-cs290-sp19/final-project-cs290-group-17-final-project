@@ -69,7 +69,14 @@ function loadPage(attackData){
 
 window.addEventListener('DOMContentLoaded', function () {
 
-  // Remember all of the existing twits in an array that we can use for search.
+	var createGenerateButton    = document.getElementById('create-twit-button');
+		if (createTwitButton) {
+		createTwitButton.addEventListener('click', showCreateTwitModal);
+	}
+	
+
+
+   	// Remember all of the existing twits in an array that we can use for search.
   
 /*	var weaponArr = loadPage(attackData);
 
