@@ -1,3 +1,4 @@
+
 <main class="attackPageBody" >
 		
 		<article class = "Character-Creation-Container">
@@ -17,10 +18,12 @@
 				<textarea id = "Weapon-Score-Input"></textarea>
 			</div>
 
-			{{#each weapons}}
-                {{>weapon}}
-            {{/each}}
-
+            <div class = "weapons-container">
+                {{#each weapons}}
+                    {{>weapon}}
+                {{/each}}
+            </div>
+            
 			<button class = "Generate-Character">
 				<h> Generate </h>
 			</button>
