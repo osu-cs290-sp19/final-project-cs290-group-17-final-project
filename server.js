@@ -17,22 +17,25 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 
-var mongoHost = process.env.MONGO_HOST// || "classmongo.engr.oregonstate.edu";
+var mongoHost = process.env.MONGO_HOST || "classmongo.engr.oregonstate.edu";
 var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.env.MONGO_USER //|| "cs290_butlenat";
-var mongoPassword = process.env.MONGO_PASSWORD// || "cs290_butlenat";
-var mongoDBName = process.env.MONGO_DB_NAME //|| "cs290_butlenat";
+var mongoUser = process.env.MONGO_USER || "cs290_butlenat";
+var mongoPassword = process.env.MONGO_PASSWORD || "cs290_butlenat";
+var mongoDBName = process.env.MONGO_DB_NAME || "cs290_butlenat";
 var mongoURL = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDBName}`;
-var mongoDBDatabase;
 console.log(mongoURL);
+
+var mongoDBDatabase;
 
 
 app.get('/attack/', function(req, res){
-	var weapons = db.collection('weapons');
+	var weapons = mongoDBDatabase.collection('weapons');
     weapons.find({}).toArray(function (err, weaponDocs) {
         if (err) {
             res.status(500).send("Error fetching people from DB.");
+           
         } else {
+            console.log(weaponDocs);
             res.status(200).render('attack', 
             {
                 weapons: weaponDocs
@@ -47,9 +50,9 @@ app.get('*', function (req, res) {
 });
 
 
-MongoClient.connect(mongoURL, function (err, client) {
-    if (err) {
-        throw err;
+MongoClient.connect(mongoURL, function (err, client){
+    if(err){
+        throw err
     }
     db = mongoDBDatabase = client.db(mongoDBName);
     app.listen(3000, function () {
