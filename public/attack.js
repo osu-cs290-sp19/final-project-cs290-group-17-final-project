@@ -2,6 +2,7 @@
 /*var attackData = JSON.parse("attack.json");
 */
 /*var fs = require("fs");*/
+var generateButton = 
 
 function readAttackData(attackData){
 	var s = attackData.length;
@@ -69,8 +70,8 @@ function loadPage(attackData){
 
 window.addEventListener('DOMContentLoaded', function () {
 
-	var createGenerateButton    = document.getElementById('create-twit-button');
-		if (createTwitButton) {
+	var createGenerateButton    = document.getElementById('create-link-button');
+		if (createLink) {
 		createTwitButton.addEventListener('click', showCreateTwitModal);
 	}
 	
