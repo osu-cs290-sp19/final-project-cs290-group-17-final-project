@@ -35,7 +35,7 @@ app.get('/attack/', function(req, res){
             res.status(500).send("Error fetching people from DB.");
            
         } else {
-            console.log(weaponDocs);
+            
             res.status(200).render('attack', 
             {
                 weapons: weaponDocs
