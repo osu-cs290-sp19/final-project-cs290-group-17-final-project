@@ -127,3 +127,15 @@ header .site-title{
     font-size: 24px;
 	
 }
+
+.error-container{
+	text-align:center;
+	font-family: Times New Roman, Helvetica, sans-serif;
+}
+
+.error-container h2{
+	font-size: 60px;
+	font-weight: lighter;
+	
+}
+
