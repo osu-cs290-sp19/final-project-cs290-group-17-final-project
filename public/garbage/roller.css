@@ -1,0 +1,148 @@
+body {
+  font-family: Times New Roman, Helvetica, sans-serif;
+  font-size: 20;
+  margin: 0;
+  background-color: rgb(238, 238, 238);
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    
+    flex-grow: 1;
+
+}
+
+.site-title {
+    font-size: 36;
+    background-color: rgb(88, 8, 153);
+    margin: 0;
+    padding: 5% 3% 7% 2%;
+    text-decoration: none;
+    color: white;
+    font-family: Roboto;
+    font-weight: 100;
+}
+header .site-title{
+    font-family: 'Niconne', cursive;
+}
+
+.navbar{
+    display:flex;
+    flex-grow:1;
+    
+    background-color: rgb(227, 195, 240);
+}
+
+.navlist{
+    text-align: right;
+    padding-top:0.6%;
+    flex-grow:1;
+    padding-left: 1.5%;
+}
+
+.navlist li{
+    display: inline;
+    margin-right: 1.5%;
+}
+
+.navlist li a  {
+    text-decoration: none;
+    color: black;
+}
+
+.navlist li a:hover{
+    color: rgb(224, 81, 81);
+}
+
+.twit-input-element textarea {
+  flex: 6 200px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid #de2f2f;
+}
+
+
+/* MY PRECIOUS*/
+
+.unique-dice{
+	margin: auto;
+    width: 50%;
+    height: 35px;
+    border: 3px solid rgb(227, 195, 240);
+    padding: 20px;
+	border-radius: 10%;
+	
+}
+
+.dice-amount{
+	border: 1.5px solid black;
+    border-radius: 10px;
+    margin: 7px;
+    width: 40px;
+    float: right;
+    margin-top: 0;
+	text-align: center;
+	font-size: 32px;
+}
+
+.dice-text{
+	float: left;
+    margin: 7px;
+
+	
+}
+
+#roll-dice-button{
+	margin: auto;
+    display: flex;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Times New Roman, Helvetica, sans-serif;
+	
+}
+
+#roll-dice-button:hover{
+	border: 1.5px solid red;
+	cursor: pointer;
+}
+
+#roll-dice-button:active{
+	background-color: grey;
+}
+
+#total-amount{
+	margin: auto;
+    width: 50%;
+    height: 35px;
+    border: 6px solid rgb(88, 8, 153);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+	border-radius:50%
+	
+}
+
+.error-container{
+	text-align:center;
+	font-family: Times New Roman, Helvetica, sans-serif;
+}
+
+.error-container h2{
+	font-size: 240px;
+	font-weight: bold;
+	margin: 0px;
+	
+}
+.error-text{
+	font-size: 60px;
+	
+}
+
