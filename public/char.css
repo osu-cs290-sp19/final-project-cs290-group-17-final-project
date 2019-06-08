@@ -58,12 +58,6 @@ header .site-title{
     color: rgb(224, 81, 81);
 }
 
-.char-container {
-  margin: 10px 20%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .inser-bar {
   display: flex;
   flex-wrap: wrap;
@@ -92,11 +86,17 @@ header .site-title{
 	font-size: 18px;
 }
 
+.char-container {
+  margin: 10px 20%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .char {
   flex: 0 1 100%;
   display: flex;
-  margin: 2px;
-  padding: 3px ;
+  margin: 2px 0px;
+ padding: 3px ;
   border: 1px solid #dadada;
   border-radius: 2px;
   background-color: #fff;
@@ -110,7 +110,6 @@ header .site-title{
 }
 
 .char-content .char-notes{
-  align-self: flex-start;
 }
 
 .char-create {
@@ -125,8 +124,20 @@ header .site-title{
   background-color: rgb(88, 8, 153);
   color: #fff;
   cursor: pointer;
+  outline: none;
 }
 
+.char-create:hover,
+.cha-create:focus{
+    background-color: rgb(227, 195, 240);
+    outline: none;
+}
+
+.char-clear:hover,
+.cha-clear:focus{
+    background-color: rgb(227, 195, 240);
+    outline: none;
+}
 .char-clear {
   position: fixed;
   left: 4%;
@@ -139,4 +150,5 @@ header .site-title{
   background-color: rgb(88, 8, 153);
   color: #fff;
   cursor: pointer;
+  outline: none;
 }
