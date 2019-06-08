@@ -47,6 +47,16 @@ app.get('/attack/', function(req, res){
 
 app.get('*', function (req, res) {
     res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+<<<<<<< HEAD
+  });
+app.get('/attack/', function(req,res){
+	res.status(200).json(attackData);
+})
+  
+  app.listen(port, function () {
+    console.log("== Server is listening on port", port);
+  });
+=======
 });
 
 
@@ -59,3 +69,4 @@ MongoClient.connect(mongoURL, function (err, client){
         console.log("== Server listening on port 3000");
     });
 });
+>>>>>>> 4305f5810e8424f7f129a4c295fbf73c1eaf934d
