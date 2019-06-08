@@ -30,7 +30,7 @@ var db = null;
 
 MongoClient.connect(mongoURL, function (err, client) {
   if (err) {
-    throw err;
+    //throw err;
   }
   db = client.db(mongoDBName);
   app.listen(3000, function () {
