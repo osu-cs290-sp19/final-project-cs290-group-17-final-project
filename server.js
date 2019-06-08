@@ -17,11 +17,11 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 
-var mongoHost = process.env.MONGO_HOST;
+var mongoHost = process.env.MONGO_HOST || "cs290_butlenat";
 var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.env.MONGO_USER;
-var mongoPassword = process.env.MONGO_PASSWORD;
-var mongoDBName = process.env.MONGO_DB_NAME;
+var mongoUser = process.env.MONGO_USER || "cs290_butlenat";
+var mongoPassword = process.env.MONGO_PASSWORD || "cs290_butlenat";
+var mongoDBName = process.env.MONGO_DB_NAME || "cs290_butlenat";
 var mongoURL = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDBName}`;
 
 var db = null;
