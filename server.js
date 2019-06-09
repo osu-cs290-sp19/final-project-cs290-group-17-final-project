@@ -12,8 +12,7 @@ var port = process.env.PORT || 3000;
 app.engine('handlebars', expressHB({defaultLayout: 'main'}));
 
 app.set('view engine', 'handlebars');
-
-
+app.use(express.json());
 app.use(express.static('public'));
 
 
@@ -45,13 +44,18 @@ app.get('/attack/', function(req, res){
     
 });
 
+
+
+app.post('/attack/characters', function(req, res){
+    res.sendStatus(200);
+    var data = JSON.parse(req.body);
+    db.characters.insertOne(data);
+});
+
 app.get('*', function (req, res) {
     res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
   });
-app.get('/attack/', function(req,res){
-	res.status(200).json(attackData);
-})
-  
+
 MongoClient.connect(mongoURL, function (err, client) {
     if (err) {
       throw err;
