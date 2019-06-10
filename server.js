@@ -45,11 +45,44 @@ app.get('/attack/', function(req, res){
 });
 
 
+app.get('/characters', function(req, res){
+	var chars = mongoDBDatabase.collection('characters');
+    chars.find({}).toArray(function (err, charDocs) {
+        if (err) {
+            res.status(500).send("Error fetching people from DB.");
+           
+        } else {
+            console.log(charDocs);
+            res.status(200).render('character', 
+            {
+                chars: charDocs
+            });
+        }
+    });
+    
+});
 
-app.post('/attack/characters', function(req, res){
+
+app.post('/characters', function(req, res, next){
     res.sendStatus(200);
-    var data = JSON.parse(req.body);
-    db.characters.insertOne(data);
+    var data = req.body
+    db.collection('characters').insertOne(
+        data,
+        function (err, result) {
+            if (err) {
+              res.status(500).send({
+                error: "Error inserting  into DB"
+              });
+            } else {
+              console.log("== update result:", result);
+              if (result.matchedCount > 0) {
+                res.status(200).send("Success");
+              } else {
+                next();
+              }
+            }
+        });
+    console.log(data);
 });
 
 app.get('*', function (req, res) {

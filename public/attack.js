@@ -2,6 +2,7 @@ var nameInput;
 var weapProf;
 var abilityScore;
 var generate;
+var link;
 
 var name;
 var weaponContainer;
@@ -18,10 +19,12 @@ window.addEventListener("load", function(event) {
     this.console.log(nameInput.value);
     weapProf = document.getElementById("Weapon-Proficiency-Input");
     abilityScore = document.getElementById("Weapon-Score-Input");
+    link = document.getElementsByClassName('weaponPic')[0].getElementsByTagName('img')[0];
 });
 
 
 function setName(event){
+   
     name = event.target.parentNode.getElementsByClassName("weapon-Name")[0].textContent;
     console.log(event.target);
 }
@@ -29,19 +32,17 @@ function setName(event){
 var data;
 
 
-
 function sendData(event){
     console.log("generate button clicked");
     data = {
-        character: {
             name: name,
             prof: weapProf.value,
             score: abilityScore.value,
-            charName: nameInput.value
-        }
+            charName: nameInput.value,
+            link: link.value
     };
 
-    const url = "http://localhost:3000/attack/characters";
+    const url = "http://localhost:3000/characters";
     fetch(url, {
         method: 'POST',
         headers: {
