@@ -1,24 +1,29 @@
 body {
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: Times New Roman, Helvetica, sans-serif;
+  font-size: 20;
   margin: 0;
-  background-color: #eee;
+  background-color: rgb(238, 238, 238);
 }
 
-a {
-  text-decoration: none;
+a{
+    text-decoration: none;
 }
 
-#ownerWeapon{
-	
-	display: flex;
-	flex-flow: column wrap;
-	
-	width: 90%;
-	height: 90%;
-	max-height: 425px;
-	position: relative;
-
+h#ownerName{
+	color: black;
+	font-size: 35px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+p#owner-Wep-Prof{
 }
 
+p#owner-Score-Input{
+}
+p.owner.weapon-name{
+text-decoration: underline;
+font-weight: 100;
+}
 
-
+p.owner-weapon-dice{
+}
